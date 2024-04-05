@@ -1,0 +1,32 @@
+@media(max-width:768px) {
+
+    .container {
+        max-width: 768px;
+        margin: 0 auto;
+        padding: 0px 30px;
+    }
+
+    .hero {
+        min-height: 100vh;
+        height: auto;
+    }
+
+    .hero__content {
+        flex-grow: 1;
+        flex-direction: column;
+        padding: 60px 56px 0px 56px;
+        padding-top: 60px;
+        max-width: 570px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .hero__desc {
+        margin-bottom: 100px;
+    }
+
+    .hero__btn-wrap {
+        width: 100%;
+        text-align: center;
+    }
+}

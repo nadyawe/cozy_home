@@ -26,20 +26,17 @@ body {
     height: 100%;
 }
 
-body {
-    font-family: var(--font-family);
+img {
+    max-width: 100%;
 }
 
-img {
-    min-height: 100%;
+a {
+    text-decoration: none;
 }
 
 ul {
     margin: 0;
     padding: 0;
-}
-
-ul>li {
     list-style: none;
 }
 
@@ -52,23 +49,15 @@ h6 {
     margin: 0;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-p {
-    margin: 0;
-}
-
 .wrapper {
     min-height: 100%;
-    --font-family: "Georgia", sans-serif;
+    font-family: var(--font-family);
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1240px;
     margin: 0 auto;
+    padding: 0px 20px;
 }
 
 .hero {
@@ -89,24 +78,25 @@ p {
     align-items: center;
 }
 
+
 .logo {
     display: block;
 }
 
 .logo__title {
-    font-family: var(--font-family);
+    font-family: Georgia, sans-serif;
     font-weight: 400;
     font-size: 32px;
-    line-height: 110%;
     letter-spacing: 0.06em;
     color: var(--color-primary);
+    margin-bottom: 10px;
+    white-space: nowrap;
 }
 
 .logo__subtitle {
-    padding-top: 5px;
-    font-family: var(--second-family);
+    font-family: "Arial", sans-serif;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 13px;
     letter-spacing: 0.1em;
     color: var(--color-light-xl);
 }
@@ -115,16 +105,10 @@ p {
 
 .nav__list {
     display: flex;
-    justify-content: space-between;
-    column-gap: 30px;
+    column-gap: 35px;
 }
 
 .nav__item {
-    font-family: var(--second-family);
-
-    font-size: 15px;
-    line-height: 160%;
-    color: var(--color-dark-s);
     border-bottom: 3px solid transparent;
     padding-bottom: 6px;
     transition: all 0.3s;
@@ -136,34 +120,43 @@ p {
 
 .nav__link {
     font-family: var(--second-family);
-
+    font-weight: 400;
+    font-size: 15px;
     color: var(--color-light-s);
+    white-space: nowrap;
 }
 
-.hero_content {
+
+.hero__content {
     display: flex;
     justify-content: space-between;
     flex-grow: 1;
 }
 
-.hero__desc {
 
-    height: 322px;
+.hero__desc {
+    /* Делаем блок flex контейнером */
     display: flex;
+    /* Меняем направление главной оси (теперь главная ось - вертикальная) */
     flex-direction: column;
+    /* Выравниваем по центру по главной оси (в нашем случаи по вертикали)  */
     justify-content: center;
+    /* Выравниваем поцентру поперечной оси (в нашем случаи по горизонтали) */
     align-items: flex-start;
-    width: 460px;
+    /* Устанавливаем максимальную ширину как ув макете */
+    max-width: 460px;
+}
+
+.hero__desc .title {
+    margin-bottom: 42px;
 }
 
 .title {
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 44px;
-    line-height: 130%;
     color: var(--color-light-xl);
-    margin-bottom: 60px;
-    margin-top: 400px;
+    max-width: 310px;
 }
 
 .paragraph {
@@ -171,46 +164,74 @@ p {
     font-weight: 400;
     font-size: 15px;
     line-height: 160%;
-    color: var(--color-dark-s);
-    margin-bottom: 40px;
 }
 
-.hero__paragraph {}
+.hero__paragraph {
+    margin-bottom: 42px;
+    margin-top: 0;
+    color: var(--color-dark-s);
+}
 
 .btn {
-    display: block;
-    background: var(--color-primary);
-    border-radius: 100px;
-    padding: 15px 45px;
-    width: 207px;
-    height: 52px;
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 17px;
+    letter-spacing: 0.06em;
     color: var(--color-dark-3xl);
+    border-radius: 100px;
+    padding: 15px 45px;
+    display: inline-block;
+    background: var(--color-primary);
+
 }
 
 .hero__btn {}
 
-.hero__img-wrap {}
-
-.hero__img {
-
-    height: 728px;
+.hero__img-wrap {
+    /* Делаем flex - контейнером */
+    display: flex;
+    /* Помещаем в конец поперечной оси (в нашем случае внизу блока) */
+    align-items: flex-end;
+    /* Помещаем в конец главной оси (в нашем случае справа) */
+    justify-content: flex-end;
 }
 
-.main {}
+.about {
+    padding: 80px 0px 100px;
+    background: var(--color-light-xl);
+}
 
-.container {
+.about__content {
     display: flex;
 }
 
-.main__img-wrap {}
+.about__img-wrap {
+    width: 50%;
+    text-align: center;
+}
 
-.main__img {}
+.about__img {}
 
-.main__content {}
+.about__desc {
+    width: 50%;
+    max-width: 430px;
+}
 
-.main__title {}
+.section-title {
+    font-weight: 400;
+    font-size: 35px;
+    letter-spacing: 0.06em;
+    color: var(--color-dark-l);
+}
 
-.main__desc {}
+.about__title {
+    margin-bottom: 25px;
+}
+
+.about__text {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+    color: var(--color-dark-xl);
+}
