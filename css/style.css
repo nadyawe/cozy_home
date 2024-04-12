@@ -56,12 +56,13 @@ h6 {
 
 .container {
     max-width: 1240px;
-    margin: 0 auto;
     padding: 0px 20px;
+    margin: 0 auto;
 }
 
 .hero {
     height: 100vh;
+    min-height: 650px;
     background: url(../img/bg/noise_transparent.png), url(../img/bg/start-screen-gradient-background.png);
 }
 
@@ -131,6 +132,7 @@ h6 {
     display: flex;
     justify-content: space-between;
     flex-grow: 1;
+    overflow: hidden;
 }
 
 
@@ -185,14 +187,11 @@ h6 {
 
 }
 
-.hero__btn {}
+
 
 .hero__img-wrap {
-    /* Делаем flex - контейнером */
     display: flex;
-    /* Помещаем в конец поперечной оси (в нашем случае внизу блока) */
     align-items: flex-end;
-    /* Помещаем в конец главной оси (в нашем случае справа) */
     justify-content: flex-end;
 }
 
@@ -210,7 +209,6 @@ h6 {
     text-align: center;
 }
 
-.about__img {}
 
 .about__desc {
     width: 50%;
@@ -236,8 +234,55 @@ h6 {
     color: var(--color-dark-xl);
 }
 
-.friend {
+.friends {
     background: var(--color-light-l);
     padding-top: 80px;
     padding-bottom: 100px;
+}
+
+.friends__title {
+    margin: 0 auto;
+    max-width: 400px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.friends__slider {
+    position: relative;
+    padding: 0px 52px;
+}
+
+.slider__controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+
+.slider__control {
+    display: block;
+    transform: translateY(-50%);
+    position: absolute;
+}
+
+.slider__control-prev {
+    left: 0;
+}
+
+.slider__control-next {
+    right: 0;
+}
+
+.friends__list {
+    display: flex;
+    max-width: 990px;
+    margin: 0 auto;
+    justify-content: space-between;
+    column-gap: 90px;
+}
+
+.friend {
+    width: 270px;
+    overflow: hidden;
 }
