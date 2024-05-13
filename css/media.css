@@ -1,4 +1,4 @@
-@media (max-width: 768px) {
+@media (max-width: 925px) {
     .container {
         max-width: 768px;
         margin: 0 auto;
@@ -25,5 +25,19 @@
     .hero__btn-wrap {
         width: 100%;
         text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .help__contant {
+        max-width: 630px;
+    }
+
+    .help__list {
+        gap: 55px 60px;
+    }
+
+    .help__item {
+        flex: 1 0 170px;
     }
 }
